@@ -5,4 +5,4 @@ for (var i = 0; i<5; i++){
 }
 
 num = Math.pow(num1, 3);
-console.log(num);
+alert(num);
