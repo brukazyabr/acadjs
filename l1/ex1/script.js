@@ -1,6 +1,6 @@
 
 var budget = +prompt("Какой ваш бюджет на месяц в рублях?");
-var nameMag = prompt("Какое имя вашего машазина?");
+var nameMag = prompt("Какое имя вашего магазина?");
 
 mainList  = {
 	budget,
