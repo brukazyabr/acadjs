@@ -8,7 +8,9 @@ alert(str);
 var arr = [20, 33, "Человек", 1, 2, 3];
 var sum = 0;
 for (var i = 0; i < 6; i++) {
+	if(!isNaN(arr[i])){
 	sum = sum + Math.pow(arr[i], 3);
+	}
 } 
 var sqrt = Math.sqrt(sum);
 console.log(sqrt);
