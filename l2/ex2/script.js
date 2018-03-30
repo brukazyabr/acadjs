@@ -18,10 +18,10 @@ mainList  = {
 
 for (let i = 0; i < 3; i++) {
 	let nameThing = prompt("Какой тип товара будем продавать?");
-	if((typeof(nameThing)) === "string" && (typeof(nameThing)) !== null && nameThing.length < 50 && nameThing != "") {
+	if((typeof(nameThing)) === "string" && (typeof(nameThing)) !== null && nameThing.length <= 50 && nameThing != "") {
 		mainList.shopGoods.push(nameThing);
 	} else {
-		alert("Введите тип товаров правильно!");
+			alert("Введите тип товаров правильно!");
 	}
 	
 }
