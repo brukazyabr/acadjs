@@ -10,5 +10,4 @@ for (let i = 0; i < count; i++) {
 		sum = sum + a;
 	}
 }
-console.log(arr);
 console.log(sum);
