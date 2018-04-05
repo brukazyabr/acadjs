@@ -63,8 +63,9 @@ mainList  = {
 mainList.shopItems.forEach(function(item, i, arr) {
 	console.log("У нас вы можете купить:\n" + (i+1) + " : " + mainList.shopItems[i]);
 });
+	console.log("Наш магазин включает в себя:\n"); 
 for (let key in mainList) {
-	console.log("Наш магазин включает в себя:\n" + key + " – " + mainList[key]);
+	console.log(key + " – " + mainList[key]);
 };
 
 /*discountPrice(100);
