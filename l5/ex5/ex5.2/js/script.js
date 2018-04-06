@@ -1,5 +1,22 @@
 
-let money, nameMag, time, hours, price, partPrice, employerName;
+let money, nameMag, time, hours, price, partPrice, employerName,
+	openBtn = document.getElementById("open-btn"),
+	name = document.getElementByClassName("name-value"),
+	dengi = document.getElementByClassName("budget-value"),
+	category = document.getElementByClassName("goods-value"),
+	tovary = document.getElementByClassName("items-value"),
+	sotrudniki document.getElementByClassName("employers-value"),
+	skidki document.getElementByClassName("discount-value"),
+	otkritie = document.getElementByClassName("isopen-value"),
+	chooseecategory = document.getElementByClassName("goods-item"),
+	goodsItemBtn = document.getElementsByTag("goods-item-btn"),
+	
+	countBudgetValue = document.getElementsByTag("count-budget-btn"),
+	employersBtn = document.getElementsByTag("hire-employers-btn"),
+	chooseItem = document.querrySelector("choose-item"),
+	countBudget = document.querrySelector("count-budget-value"),
+	timeValue= document.querrySelector("time-value"),
+	headHunt = document.querrySelectorAll("hire-employers-item");
 
 function start() {
 	money = +prompt("Какой ваш бюджет на месяц в рублях?", "");
@@ -68,13 +85,6 @@ for (let key in mainList) {
 	console.log("Наш магазин включает в себя:\n" + key + " – " + mainList[key]);
 };
 
-/*discountPrice(100);
-
-hr();
-
-chooseGoods();
-
-workTime(hours);*/
 
 
 alert("Ваш ежедневный бюджет: " + money/30 + " рублей.");
