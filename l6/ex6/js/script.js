@@ -79,10 +79,15 @@ employersBtn.addEventListener('click', () => {
 });
 
 discount_value.addEventListener('click', () => {
-	mainList.discount = true;
-	partPrice = price * 0.8;
-	discount_value.style.backgroundColor = "green";
-
+	if (mainList.discount == false) {
+		mainList.discount = true;
+		partPrice = price * 0.8;
+		discount_value.style.backgroundColor = "green";
+	} else {
+		mainList.discount = false;
+		discount_value.style.backgroundColor = "red";
+	
+	}
 });
 
 mainList  = {
