@@ -71,7 +71,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			seconds.innerHTML = t.seconds;
 
 			if (t.total <= 0) {
-				clearInterval(timeInterval);
+				clearInterval(timeInterval)
 			};
 
 		};
