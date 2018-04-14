@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		}
 	}
 
-	hideTabContent (1)
+	hideTabContent (1);
 
 	function showTabContent (b) {
 		if (tabContent[b].classList.contains('hide')) {
@@ -30,18 +30,18 @@ window.addEventListener('DOMContentLoaded', () => {
 					break;
 				}
 			}
-		};
+		}
 	});
 
 	//Timer
-	let deadLine = '2018-03-20';
+	let deadLine = '2018-04-20';
 
 	function getTimeRemainig(endTime) {
-		let t;
+		let t, seconds, minutes, hours;
 		if (Date.parse(endTime) > Date.parse(new Date())) {
 			t = Date.parse(endTime) - Date.parse(new Date());
-			seconds = Math.floor((t/1000)&60),		
-			minutes = Math.floor((t/1000/60)&60),
+			seconds = Math.floor((t/1000)%60);		
+			minutes = Math.floor((t/1000/60)%60);
 			hours = Math.floor(t/(1000*3600));
 		} else {
 			seconds = "00";
@@ -56,7 +56,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			'minutes': minutes,
 			'hours': hours
 		};
-	};
+	}
 
 	function setClock(id, endTime) {
 		let timer = document.getElementById(id),
@@ -71,17 +71,32 @@ window.addEventListener('DOMContentLoaded', () => {
 			seconds.innerHTML = t.seconds;
 
 			if (t.total <= 0) {
-				clearInterval(timeInterval)
-			};
+				clearInterval(timeInterval);
+			}
 
-		};
+		}
 
 		updateClock();
 		let timeInterval = setInterval(updateClock, 1000);
-	};
+	}
 
 	setClock('timer', deadLine);
 
+	let more = document.querySelector('.more'),
+		overlay = document.querySelector('.overlay'),
+		close = document.querySelector('.popup-close');
+
+	more.addEventListener('click', function () {
+		this.classList.add('more-splash');
+		overlay.style.display = 'block';
+		document.body.style.overflow = 'hidden';
+	});
+
+	close.addEventListener('click', function() {
+		overlay.style.display = 'none';
+		more.classList.remove('more-splash');
+		document.body.style.overflow = '';
+	});
 
 });
 
