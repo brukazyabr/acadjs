@@ -106,7 +106,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	let form = document.getElementsByClassName('main-form')[0],
 		input = form.getElementsByTagName('input'),
 		statusMessage = document.createElement('div');
-		//statusMessage.classList.add('status');
+		statusMessage.classList.add('status');
 
 	form.addEventListener('submit', function(event) {
 		event.preventDefault();
@@ -126,7 +126,7 @@ window.addEventListener('DOMContentLoaded', () => {
 				statusMessage.innerHTML = message.loading;
 			} else if (request.readyState === 4) {
 				if (request.status == 200 && request.status < 300) {
-					statusMessage.innerHTML = message.succes;
+					statusMessage.innerHTML = message.success;
 				} else {
 					statusMessage.innerHTML = message.failure;
 				}
