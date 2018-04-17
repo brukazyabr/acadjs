@@ -34,7 +34,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	});
 
 	//Timer
-	let deadLine = '2018-03-20';
+	let deadLine = '2018-04-18';
 
 	function getTimeRemainig(endTime) {
 		let t, seconds, minutes, hours;
@@ -170,6 +170,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		}
 	});
 
+	
 	
 
 
