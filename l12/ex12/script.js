@@ -5,7 +5,7 @@ $(document).ready(function() {
 		$('.modal').slideDown('slow');
 	});
 
-	$('.main_nav#sheldure').on('click', function() {
+	$('#sheldure').on('click', function() {
 		$('.overlay').fadeToggle('slow');
 		$('.modal').slideDown('slow');	
 	});
